@@ -7,6 +7,12 @@
     &__tabs {
         display: flex;
         justify-content: center;
+
+        @media (max-width: 768px) {
+            white-space: nowrap; /*tira a quebra de texto*/
+            overflow-x: scroll; /*cria o scroll na horizontal*/
+            padding-left: 18px;
+        }
         
         &__button {
             color: variaveis.$corTextoSecundario;
@@ -22,6 +28,10 @@
             &--is-active {
                 border-color: variaveis.$corTextoSecundario;
             }
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
     }
 
@@ -30,6 +40,11 @@
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            
+        }
 
         &--is-active {
             display: grid;
